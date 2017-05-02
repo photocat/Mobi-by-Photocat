@@ -442,10 +442,10 @@ li:hover .header-submenu {
     width: 21rem;
     height: 2.3rem;
     margin: 0.5rem 1.3rem 0.5rem 0;
+    padding-left: 0.2rem;
 }
 
 .contact-left-col label {
-    text-transform: uppercase;
     font-size: 1.4rem;
 }
 
@@ -500,6 +500,56 @@ li:hover .header-submenu {
 
 .contact-right-col-span-right {
     margin-left: 1rem;
+}
+
+/* Custom select */
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 2.8rem;
+    width: 21.3rem;
+    background: #fff;
+}
+.select-wrapper:before {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0.4rem;
+    display: block;
+    height: 3rem;
+    color: #787f89;
+    content: attr(data-select-label);
+    line-height: 2;
+}
+.select-wrapper:hover {
+    background: #ccc;
+}
+.select-wrapper:after {
+    content: '';
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    margin-top: -0.5rem;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 1rem solid #44556c;
+}
+.select-wrapper select {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* Custom select */
+.contact-us-c .select-wrapper {
+    width: 209px;
 }
 
 

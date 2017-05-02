@@ -83,6 +83,32 @@
         });
 
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $.fn.customSelect = function() {
+            $(this).wrap('<div class="select-wrapper">');
+            var setActiveElement = function (elem) {
+                var $elem = $(elem),
+                $option = $elem.find('option:selected');
+
+                $elem.parent().attr('data-select-label', $option.text());
+            };
+
+            setActiveElement($(this));
+
+            $(this).on('change', function () {
+                setActiveElement($(this));
+                $(this).blur();
+            });
+        };
+
+        $('select').each(function() {
+            $(this).customSelect();
+        });
+    });
+</script>
 </body>
 
 </html>
