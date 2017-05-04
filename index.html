@@ -100,23 +100,26 @@
         <div class="content">
             <div class="content-inner clearfix">
                 <h1>The Shopping cart</h1>
-                <img class="content-img" width="371" height="279" src="img/cart.png" alt="Cart" />
-                <h2>Some Bullet text here</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum has been the industry's standard dummy text ever When an unknown printer took a galley of type and scrambled It to make a type specimen book. It has survived not only five centuries</p>
-                <article class="accordion-row">
-                    <h3 class="accordion-headline">Accordion title first</h3>
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime accusantium fuga id cupiditate omnis velit vel minima dicta illo adipisci aspernatur explicabo tempore veniam facilis quam error, magnam quisquam, molestiae!
-                    </div>
-                </article>
-                <article class="accordion-row">
-                    <h3 class="accordion-headline">Accordion title second</h3>
-                    <div class="accordion-body">
-                        Itaque nam, id, consectetur veniam fugit quasi corporis labore facere iusto qui laborum laboriosam dolor perspiciatis laudantium consequatur sapiente facilis quidem. Est nam facere, aut voluptatibus voluptas tempore incidunt nihil.
-                    </div>
-                </article>
-                <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-                <script src="..js/acc.js"></script>
+                <div class="content-cart"></div><img class="content-img" width="371" height="279" src="img/cart.png" alt="Cart" />
+                <div class="content-text">
+                    <h2>Some Bullet text here</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                    <article class="accordion-row">
+                        <h3 class="accordion-headline">Our key benefit</h3>
+                        <div class="accordion-body">
+                            Flexibility, clarity, self driven development and addiction to work with all kind of businisses in our field
+                        </div>
+                    </article>
+                    <article class="accordion-row">
+                        <h3 class="accordion-headline">We respect our clients!</h3>
+                        <div class="accordion-body">
+                            Itaque nam, id, consectetur veniam fugit quasi corporis labore facere iusto qui laborum laboriosam dolor perspiciatis laudantium consequatur sapiente facilis quidem. Est nam facere, aut voluptatibus voluptas tempore incidunt nihil.
+                        </div>
+
+                    </article>
+                    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+                    <script src="..js/acc.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -150,6 +153,14 @@
                 });
             });
         })();
+        (function() {
+            var rows = document.querySelectorAll('.accordion-row');
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].addEventListener('click', function() {
+                    this.classList.toggle('active');
+                })
+            }
+        }());
     </script>
 </body>
 

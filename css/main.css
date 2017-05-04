@@ -315,6 +315,11 @@ li:hover .header-submenu {
     margin: 2.8rem 9.8rem 1.9rem 1.6rem;
 }
 
+.content-text {
+    float: right;
+    width: 49%;
+}
+
 .content-inner h1 {
     font-size: 4.2rem;
     margin-bottom: 0.3rem;
@@ -502,6 +507,7 @@ li:hover .header-submenu {
     margin-left: 1rem;
 }
 
+
 /* Custom select */
 
 .select-wrapper {
@@ -511,6 +517,7 @@ li:hover .header-submenu {
     width: 21.3rem;
     background: #fff;
 }
+
 .select-wrapper:before {
     text-align: left;
     white-space: nowrap;
@@ -523,9 +530,11 @@ li:hover .header-submenu {
     content: attr(data-select-label);
     line-height: 2;
 }
+
 .select-wrapper:hover {
     background: #ccc;
 }
+
 .select-wrapper:after {
     content: '';
     position: absolute;
@@ -538,6 +547,7 @@ li:hover .header-submenu {
     border-right: 0.5rem solid transparent;
     border-top: 1rem solid #44556c;
 }
+
 .select-wrapper select {
     left: 0;
     top: 0;
@@ -547,7 +557,9 @@ li:hover .header-submenu {
     opacity: 0;
 }
 
+
 /* Custom select */
+
 .contact-us-c .select-wrapper {
     width: 209px;
 }
@@ -728,18 +740,57 @@ li:hover .header-submenu {
 .accordion-headline,
 .accordion-body {
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    width: 53.1rem;
+    border: solid 0.1rem #4b79bb;
+    padding-left: 2rem;
 }
 
 .accordion-headline {
+    position: relative;
     cursor: pointer;
-    margin: 0.1rem 0;
-    background: lightblue;
+    margin: 0.2rem 0;
+    background: #5094f2;
+    height: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333333;
+    line-height: 1.44;
+    padding-bottom: 1.6rem;
+}
+
+.accordion-headline:after {
+    content: '';
+    position: absolute;
+    right: 1.2rem;
+    top: 38%;
+    margin-top: -0.5rem;
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1.5rem solid #ffffff;
+}
+
+.active .accordion-headline:after {
+    content: '';
+    position: absolute;
+    right: 1.7rem;
+    top: 50%;
+    margin-top: -0.5rem;
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1.5rem solid #ffffff;
 }
 
 .accordion-body {
-    background: #ccc;
+    background: #fff;
+    font-size: 1.5rem;
+    color: #333333;
     display: none;
+    margin: 0.1rem 0;
 }
 
 .active .accordion-body {
@@ -831,6 +882,4 @@ span[data-tooltip] {
 .qtip {
     max-width: 42.2rem;
     left: 54% !important;
-    
 }
-
