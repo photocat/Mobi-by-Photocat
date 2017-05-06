@@ -883,3 +883,26 @@ span[data-tooltip] {
     max-width: 42.2rem;
     left: 54% !important;
 }
+
+/* Print */
+
+@media print {
+    .header, .footer {
+        display: none; /* Скрываем header/footer - они не нужны для печати */
+    }
+    .features-list .features-img {
+        float: left; /* изображения смещаем влево */
+    }
+    .features-list li {
+        width: 100%; /* растягиваем на 100% элементы списка */
+    }
+    li {
+        page-break-inside: avoid; /* запрещаем разрыв страницы в элементах li */
+    }
+    .content-accordion {
+        width: 100%; /* растягиваем аккордион на всю ширину */
+    }
+    .accordion-body {
+        display: block; /* раскрываем элементы аккордиона */
+    }
+}
