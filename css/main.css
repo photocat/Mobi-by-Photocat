@@ -113,7 +113,7 @@ h6 {
     right: 0;
     position: absolute;
     width: 22.7rem;
-    background: rgba(80, 148, 242, .8);
+    background: rgba(80, 148, 242, 1);
     opacity: 0;
     transition: opacity .3s ease-in;
     pointer-events: none;
@@ -129,6 +129,11 @@ li:hover .header-submenu {
     pointer-events: inherit;
     display: block;
     opacity: 1;
+}
+
+.header-submenu a:hover {
+    background-color: #fff;
+    color: #5094f2;
 }
 
 
@@ -450,6 +455,7 @@ li:hover .header-submenu {
     padding-left: 0.2rem;
 }
 
+
 .contact-left-col label {
     font-size: 1.4rem;
 }
@@ -480,6 +486,10 @@ li:hover .header-submenu {
     cursor: pointer;
 }
 
+.contact-form-button:hover {
+    background-color: #fff;
+    color: #5094f2;
+}
 .contact-right-col {
     float: right;
     width: 50%;
@@ -501,6 +511,14 @@ li:hover .header-submenu {
 
 .contact-right-col-span-left {
     margin-right: 1.8rem;
+}
+
+
+.contact-right-col-span-left:after {
+    content: '|';
+    color: #fff;
+    padding-left: 2rem;
+    
 }
 
 .contact-right-col-span-right {
@@ -666,6 +684,11 @@ li:hover .header-submenu {
     padding-bottom: 0.5rem;
     cursor: pointer;
     margin-bottom: 1rem;
+}
+
+.services-plans-order-button:hover{
+    background-color: #fff;
+    color: #5094f2;
 }
 
 .services-plans-table-img {
